@@ -29,7 +29,9 @@ class AdminController extends Controller
     // List all users (admin only)
     public function listUsers()
     {
-        $users = User::orderBy('created_at', 'desc')->paginate(10); // You can use simplePaginate()
+        $users = User::where('role', '!=', 'admin')
+                 ->orderBy('created_at', 'desc')
+                 ->paginate(10);
 
         return view('admin.users', compact('users'));
     }
