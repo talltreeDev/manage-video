@@ -15,7 +15,14 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    @can('admin')
+                        <x-nav-link :href="route('admin.users')" :active="request()->routeIs('admin.users')">
+                            {{ __('User Management') }}
+                        </x-nav-link>
+                    @endcan
                 </div>
+
             </div>
 
             <!-- Settings Dropdown -->
