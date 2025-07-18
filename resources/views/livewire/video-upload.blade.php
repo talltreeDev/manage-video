@@ -23,10 +23,9 @@
 
             <div class="flex items-center space-x-2">
                 <select wire:model="convertTo" class="border rounded px-2 py-1">
-                    <option value="mp4">MP4</option>
-                    <option value="avi">AVI</option>
-                    <option value="webm">WebM</option>
-                    <option value="mov">MOV</option>
+                    @foreach ($allowedFormats as $format)
+                        <option value="{{ $format }}">{{ strtoupper($format) }}</option>
+                    @endforeach
                 </select>
                 <button wire:click="convert" class="bg-green-500 text-white px-4 py-2 rounded">Convert</button>
             </div>
