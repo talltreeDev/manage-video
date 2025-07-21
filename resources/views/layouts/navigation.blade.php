@@ -16,6 +16,14 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
+                    @auth
+                        @if(in_array(Auth::user()->role, ['free', 'premium']))
+                            <x-nav-link :href="route('upload')" :active="request()->routeIs('upload')">
+                                {{ __('Upload') }}
+                            </x-nav-link>
+                        @endif
+                    @endauth
+
                     @can('admin')
                         <x-nav-link :href="route('admin.users')" :active="request()->routeIs('admin.users')">
                             {{ __('User Management') }}

@@ -32,7 +32,7 @@
                                         <option value="premium" @if($user->role === 'premium') selected @endif>Premium</option>
                                         <option value="admin" @if($user->role === 'admin') selected @endif>Admin</option>
                                     </select>
-                                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-2 py-1 rounded ml-2">
+                                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-sm px-2 py-1 rounded ml-2">
                                         Update Role
                                     </button>
                                 </form>

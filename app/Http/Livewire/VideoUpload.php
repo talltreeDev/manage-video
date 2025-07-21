@@ -27,11 +27,6 @@ class VideoUpload extends Component
             : ['mp4'];
     }
 
-    public function updatedVideo()
-    {
-        $this->upload();
-    }
-
     public function upload()
     {
         $this->validate([

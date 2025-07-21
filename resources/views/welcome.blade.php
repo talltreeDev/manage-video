@@ -11,8 +11,6 @@
 
     <!-- Alpine.js -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-    @livewireStyles
 </head>
 <body class="bg-gray-100 text-gray-900 antialiased">
     <div class="min-h-screen flex items-center justify-center p-6">
@@ -28,7 +26,5 @@
             @endauth
         </div>
     </div>
-
-    @livewireScripts
 </body>
 </html>
